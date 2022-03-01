@@ -1,5 +1,6 @@
 import "./style.scss";
-interface PrimaryButtonProps {
+
+interface SecondaryButtonProps {
   buttonText: string;
   linkUrl?: string;
   width: string;
@@ -9,20 +10,20 @@ interface PrimaryButtonProps {
   borderRadius?: string;
 }
 
-const PrimaryButton = ({
+function SecondaryButton({
   buttonText,
   linkUrl,
   width,
   height,
-  onClick,
   className,
   borderRadius,
-}: PrimaryButtonProps) => {
+  onClick,
+}: SecondaryButtonProps) {
   return (
-    <div className="primary">
+    <div className="secondary">
       <a href={linkUrl}>
         <button
-          className={`primary__btn ${className}`}
+          className={`secondary-btn ${className}`}
           style={{ width, height, borderRadius }}
           onClick={onClick}
         >
@@ -31,6 +32,6 @@ const PrimaryButton = ({
       </a>
     </div>
   );
-};
+}
 
-export default PrimaryButton;
+export default SecondaryButton;
